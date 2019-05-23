@@ -45,9 +45,9 @@ About input files that you can use to train the seq2seq network:
 - sentence_frame_mapped_w2_42.npy, sentence_frame_mapped_w1_42.npy, 						  sentence_frame_mapped_w3_42.npy
   All these files contain selected 42 features of frames for corresponding sentences. These can be directly used for training purposes.
 
-	  Note: I have not generated frame to gloss mapping for 42 features. If you want to perform it, bu running gloss_target_conversion.ipynb using 'key_points_42.npy' file.
+	  Note: I have not generated frame to gloss mapping for 42 features. If you want to perform it, by running gloss_target_conversion.ipynb using 'key_points_42.npy' file.
 	  or 
-	  you can run contact me. I will explain on phone or video call.
+	  you can contact me. I will explain on phone or video call.
 
 - PCA_5feat_sentence_frame_mapped_l10.npy
   Contains PCA reduced 5 feature data mapped to corresponding gloss information. 
