@@ -219,7 +219,8 @@ class Embeddings(nn.Module):
         self.d_model = d_model
     
     def forward(self, x):
-        return self.positional_embed(self.embed(x) * np.sqrt(self.d_model))
+        x = self.embed(x) * np.sqrt(self.d_model)
+        return x + self.positional_embed(x)
 
 
 # ## Generator
@@ -258,7 +259,7 @@ def buildTransformer(src_vocab, tgt_vocab, n_blocks=6,
         TransformerDecoder(n_blocks, d_model, n_heads, d_ff, dropout),
         PositionalEmbedding(d_model),
         Embeddings(d_model, tgt_vocab),
-        Generator()
+        Generator(d_model, tgt_vocab)
     )
     
     # Initialize parameters with Glorot transform
